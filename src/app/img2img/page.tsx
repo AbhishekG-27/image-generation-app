@@ -43,7 +43,7 @@ export default function ImageToImage() {
     setSourceImage(imageUrl); // Assuming sourceImage is a URL string used for preview
 
     try {
-      const result = await axios.post("http://localhost:8000/upload-image", formData, {
+      const result = await axios.post("https://c806-106-219-152-216.ngrok-free.app/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
