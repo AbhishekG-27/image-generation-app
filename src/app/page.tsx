@@ -16,7 +16,7 @@ export default function Home() {
       setError(null);
       setPrompt("");
       
-      const response = await fetch(`http://localhost:8000/generate`, {
+      const response = await fetch(`https://c806-106-219-152-216.ngrok-free.app/generate`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
