@@ -33,7 +33,7 @@ export default function Home() {
       }
 
       const data = await response.json();
-      const fullUrl = `http://127.0.0.1:8000${data.image_url}`;
+      const fullUrl = `https://c806-106-219-152-216.ngrok-free.app${data.image_url}`;
       setImageUrl(fullUrl);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
