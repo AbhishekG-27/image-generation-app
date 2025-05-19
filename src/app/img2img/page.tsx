@@ -65,7 +65,7 @@ export default function ImageToImage() {
       setIsLoading(true);
       setError(null);
 
-      const response = await fetch(`http://localhost:8000/img2img`, {
+      const response = await fetch(`https://c806-106-219-152-216.ngrok-free.app/img2img`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ export default function ImageToImage() {
       }
 
       const data = await response.json();
-      const fullUrl = `http://127.0.0.1:8000${data.image_url}`;
+      const fullUrl = `https://c806-106-219-152-216.ngrok-free.app${data.image_url}`;
       setImageUrl(fullUrl);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
